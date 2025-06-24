@@ -4,169 +4,203 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Senior Software Engineer | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f9f9f9;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      color: #333;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      line-height: 1.6;
+      display: flex;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .sidebar {
+      width: 220px;
+      background: #111827;
+      padding: 2rem 1rem;
+      height: 100vh;
+      position: fixed;
+    }
+    .sidebar h2 {
+      color: #60a5fa;
+      margin-bottom: 1rem;
+    }
+    .sidebar nav a {
+      display: block;
+      color: #9ca3af;
+      text-decoration: none;
+      margin: 0.5rem 0;
+      transition: color 0.3s;
+    }
+    .sidebar nav a:hover {
+      color: #ffffff;
+    }
+    .content {
+      margin-left: 240px;
+      padding: 2rem;
+      flex: 1;
+      animation: fadeIn 1s ease-in;
     }
     header {
-      background-color: #1f2937;
-      color: white;
-      padding: 40px 20px;
       text-align: center;
+      padding: 3rem 1rem;
+      background: #1f2937;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      margin-bottom: 2rem;
     }
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+      font-size: 3rem;
+      color: #60a5fa;
     }
     header p {
-      font-size: 1.1rem;
-      margin-top: 8px;
-    }
-    nav a {
-      color: #60a5fa;
-      margin: 0 10px;
-      text-decoration: none;
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
     }
     section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.06);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      backdrop-filter: blur(6px);
+      animation: slideUp 0.8s ease;
     }
     h2 {
-      color: #1f2937;
-      border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 8px;
-      margin-bottom: 20px;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
+      border-bottom: 2px solid #60a5fa;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
     }
     ul li::before {
       content: "✔";
       color: #10b981;
-      margin-right: 10px;
-    }
-    .project {
-      margin-bottom: 20px;
+      margin-right: 0.5rem;
     }
     .project h3 {
-      margin-bottom: 5px;
+      color: #93c5fd;
     }
     .project a {
-      color: #2563eb;
+      color: #38bdf8;
       text-decoration: none;
+    }
+    .project a:hover {
+      text-decoration: underline;
     }
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 2rem;
       font-size: 0.9rem;
-      color: #666;
+      color: #9ca3af;
     }
   </style>
 </head>
 <body>
-
-<header>
-  <h1>Senior Software Engineer</h1>
-  <p>Full Stack Developer | Machine Learning Engineer</p>
-  <nav>
-    <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
-    <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a> |
-    <a href="mailto:your.email@example.com">Email</a>
-  </nav>
-</header>
-
-<section>
-  <h2>About Me</h2>
-  <p>
-    I am a Senior Software Engineer with a strong background in full stack development and machine learning engineering. 
-    My expertise includes Java, Kotlin, React, and Spring Boot, allowing me to build scalable, cloud-native applications 
-    using Kubernetes and Kafka for real-time data processing.
-  </p>
-  <p>
-    In the realm of Artificial Intelligence and Machine Learning, I focus on model development, deployment, and optimization — 
-    applying techniques like supervised and unsupervised learning, deep learning, and natural language processing. 
-    I work with TensorFlow, PyTorch, and scikit-learn to create and deploy models in production.
-  </p>
-  <p>
-    I also design data pipelines using Apache Spark and optimize ETL workflows. 
-    With a strong command of Data Structures & Algorithms and expertise in system design (HLD & LLD), 
-    I architect efficient, scalable solutions that drive innovation and impact.
-  </p>
-</section>
-
-<section>
-  <h2>Technical Skills</h2>
-  <h3>Full Stack Development</h3>
-  <ul>
-    <li>Java, Kotlin, JavaScript, TypeScript</li>
-    <li>React, Spring Boot, REST APIs</li>
-    <li>Kafka, Redis, PostgreSQL, MongoDB</li>
-    <li>Docker, Kubernetes, CI/CD</li>
-  </ul>
-  <h3>Machine Learning & AI</h3>
-  <ul>
-    <li>Supervised & Unsupervised Learning</li>
-    <li>Deep Learning, NLP, Predictive Analytics</li>
-    <li>TensorFlow, PyTorch, scikit-learn</li>
-    <li>Model Deployment & Optimization</li>
-  </ul>
-  <h3>Data Engineering</h3>
-  <ul>
-    <li>Apache Spark, ETL Pipelines</li>
-    <li>Big Data Processing & Automation</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Projects</h2>
-
-  <div class="project">
-    <h3>Real-Time Fraud Detection System</h3>
-    <p>
-      Designed and deployed a scalable ML pipeline using Spark, Kafka, and TensorFlow to detect fraudulent transactions 
-      in real time with over 90% precision.
-    </p>
-    <p><a href="https://github.com/yourusername/fraud-detection">View Project</a></p>
+  <div class="sidebar">
+    <h2>Navigation</h2>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#ai">AI/ML</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
 
-  <div class="project">
-    <h3>AI-Powered Chatbot for Enterprise Support</h3>
-    <p>
-      Developed a contextual NLP chatbot using BERT and Rasa to automate tier-1 support queries, reducing manual workload by 60%.
-    </p>
-    <p><a href="https://github.com/yourusername/enterprise-chatbot">View Project</a></p>
+  <div class="content">
+    <header>
+      <h1>Senior Software Engineer</h1>
+      <p>Full Stack Developer | Machine Learning Engineer</p>
+      <p>
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
+        <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a> |
+        <a href="mailto:your.email@example.com">Email</a>
+      </p>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a Senior Software Engineer with strong expertise in full stack and machine learning development. I design scalable systems with React, Spring Boot, and Kubernetes, while building advanced AI models using PyTorch and TensorFlow. I architect real-time data pipelines, automate ETL workflows, and optimize large-scale data systems.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Full Stack: Java, Kotlin, React, Spring Boot, Kubernetes, Kafka</li>
+        <li>AI/ML: Supervised & Unsupervised Learning, Deep Learning, NLP, TensorFlow, PyTorch</li>
+        <li>Data Engineering: Apache Spark, Airflow, BigQuery, GCP, MongoDB</li>
+        <li>Tools: Git, Docker, CI/CD, SQL, NoSQL</li>
+      </ul>
+    </section>
+
+    <section id="ai">
+      <h2>AI and Machine Learning</h2>
+      <p>
+        I have developed scalable AI/ML systems across multiple domains including finance, retail, and logistics. My work includes:
+      </p>
+      <ul>
+        <li>Building production-grade classification and regression models using XGBoost, Random Forest, and Gradient Boosting</li>
+        <li>Training custom CNNs and RNNs using TensorFlow and PyTorch for computer vision and NLP tasks</li>
+        <li>Deploying models to production using Flask APIs, Docker containers, and cloud platforms</li>
+        <li>Using transfer learning with BERT and GPT-based models for enterprise chatbot systems</li>
+        <li>Designing feature engineering pipelines and hyperparameter optimization using Optuna</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="project">
+        <h3>Architecture Design and Development</h3>
+        <p>
+          Led design of UI and backend for a mobile app using Azure SQL DB, React, and Spring Boot. Implemented ETL pipelines using Scala, Apache Spark, and Airflow on GCP. Leveraged Kafka for real-time data and integrated BigQuery, Cloud Storage, and Dataproc.
+        </p>
+      </div>
+
+      <div class="project">
+        <h3>Cloud Migration & Streaming Data</h3>
+        <p>
+          Migrated a Kafka-based app from Azure to Walmart Cloud-native. Used Java, Spring Boot, MongoDB, and Kafka to optimize event handling and streaming performance.
+        </p>
+      </div>
+
+      <div class="project">
+        <h3>Data Warehouse Creation & Real-Time Sync</h3>
+        <p>
+          Built a data warehouse in BigQuery with 100 billion records (72 TB), maintaining real-time data sync for consistent analytics and fast decision-making.
+        </p>
+      </div>
+
+      <div class="project">
+        <h3>Real-time Data Processing & Change Data Capture</h3>
+        <p>
+          Implemented a CDC solution using Spring Boot, Java, and MongoDB, ensuring seamless updates and efficient streaming data handling.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+      <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/yourusername</a></p>
+    </section>
+
+    <footer>
+      © 2025 Your Name. All rights reserved.
+    </footer>
   </div>
-
-  <div class="project">
-    <h3>Cloud-Native Timesheet Management Platform</h3>
-    <p>
-      Full-stack development of a modern, microservices-based timesheet system with React frontend and Spring Boot backend,
-      deployed on Kubernetes.
-    </p>
-    <p><a href="https://github.com/yourusername/timesheet-platform">View Project</a></p>
-  </div>
-</section>
-
-<section>
-  <h2>Contact</h2>
-  <p>📧 Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-  <p>🔗 GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-  <p>🔗 LinkedIn: <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/yourusername</a></p>
-</section>
-
-<footer>
-  © 2025 Your Name. All rights reserved.
-</footer>
-
 </body>
 </html>
-
