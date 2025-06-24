@@ -103,7 +103,19 @@
       font-size: 0.9rem;
       color: #9ca3af;
     }
-  </style>
+      @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+      100% { transform: scale(1); }
+    }
+    .highlight {
+      background: linear-gradient(to right, #38bdf8, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      animation: pulse 3s infinite;
+    }
+</style>
 </head>
 <body>
   <div class="sidebar">
@@ -129,6 +141,10 @@
     </header>
 
     <section id="about">
+      <div class="highlight" style="font-size: 1.2rem; margin-bottom: 1rem;">
+        Passionate about solving complex business challenges through scalable architecture, intelligent systems,
+        and data-driven engineering.
+      </div>
       <h2>About Me</h2>
       <p>
         I am a Senior Software Engineer with strong expertise in full stack and machine learning development. I design scalable systems with React, Spring Boot, and Kubernetes, while building advanced AI models using PyTorch and TensorFlow. I architect real-time data pipelines, automate ETL workflows, and optimize large-scale data systems.
@@ -136,6 +152,9 @@
     </section>
 
     <section id="skills">
+      <div class="highlight" style="margin-bottom: 1rem;">
+        My skillset bridges software craftsmanship with data science, enabling me to engineer robust, cloud-native, and AI-powered platforms.
+      </div>
       <h2>Skills</h2>
       <ul>
         <li>Full Stack: Java, Kotlin, React, Spring Boot, Kubernetes, Kafka</li>
@@ -160,6 +179,13 @@
     </section>
 
     <section id="projects">
+      <div class="highlight" style="margin-bottom: 1rem;">
+        🚀 Proven track record in leading critical initiatives in <strong>architecture</strong>, <strong>cloud transformation</strong>, and <strong>intelligent automation</strong>.
+      </div>
+      <p>
+        Below are some highlights of end-to-end system design, cloud migration, and advanced machine learning integration
+        that reflect my experience in building enterprise-grade solutions.
+      </p>
       <h2>Projects</h2>
 
       <div class="project">
@@ -193,12 +219,14 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-      <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+      <p>Email: <a href="mailto:your.email@example.com">iamhimanshu.codes@gmail.com</a></p>
       <p>LinkedIn: <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/yourusername</a></p>
     </section>
 
     <footer>
+      <div class="highlight" style="margin-bottom: 0.5rem;">
+        Let's connect and build something impactful together.
+      </div>
       © 2025 Your Name. All rights reserved.
     </footer>
   </div>
